@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="">
+    <title>Universe</title>
+</head>
+<body>
+    <div class="back_img">
+        <img src="image/1.png" alt="background" id="first"> 
+        <img src="image/2.png" alt="background" id="second"> 
+        <img src="image/3.png" alt="background" id="third"> 
+        <img src="image/4.png" alt="background" id="fourth"> 
+        <img src="image/5.png" alt="background" id="fifth"> 
+        <img src="image/6.png" alt="background" id="sixth"> 
+        <img src="image/7.png" alt="background" id="seventh"> 
+        <img src="image/8.png" alt="background" id="eighth"> 
+    </div>
+    <div class="main_container">
+        <div class="navbar">
+             <div class="logo">
+                <img src="image/Group.jpg" alt="logo">
+                <p class="name">Galactic.io</p>
+             </div>
+             <ul id="sidemenu">
+                <li><a href="">Mercury</a></li>
+                <li><a href="">Venus</a></li>
+                <li><a href="">Earth</a></li>
+                <li><a href="">Mars</a></li>
+                <li><a href="">Jupiter</a></li>
+                <li><a href="">Saturn</a></li>
+                <li><a href="">Uranus</a></li>
+                <li><a href="">Neptune</a></li>
+             </ul>
+             <div class="nav_info">
+                <p>2023 solarsystemdesign</p>
+             </div>
+             <button class="toggle-btn" id="togglebtn">
+                <img src="image/ham2.jpg" alt="button">
+             </button>
+        </div>
+        <div class="start_content">
+            <h1>Let's Get To Know Our Solar System Galaxy</h1>
+            <p>Embark on a cosmic journey across the ethereal expanse of the solar system Galaxy and follow the orchestration of the cosmos and the planets weaving stories of their timeless existence.
+            </p>
+            <div class="start_btn">
+                <button>Learn More</button>
+            </div>
+         </div>
+         <script>
+            const toggleBtn=document.getElementById("togglebtn")
+            const sideMenu=document.getElementById("sidemenu")
+            
+            toggleBtn.addEventListener("click",() => {
+                sideMenu.classList.toggle("active")
+            })
+         </script>
+    </div>
+    <div class="second_sec">
+        <img src="image/sun.png" alt="sun">
+        <div class="text1">
+            <h1 class="topic">.Sun</h1>
+            <p class="exp">The Sun is a huge, glowing ball of hot plasma at the centre of our solar system and provides the vital energy needed for life on Earth. This energy radiates outward in the form of light and heat, providing warmth and light to the entire solar system.</p>
+        </div>
+     </div>
+</body>
+</html>

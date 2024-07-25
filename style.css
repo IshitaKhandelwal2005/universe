@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: inter;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /*overflow: hidden;*/
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+button{
+    background-color: none;
+    outline: none;
+    border: none;
+}
+
+
+/*############# navbar ###############################################*/
+.back_img{
+    position: absolute;
+    width: 100%;
+    min-height: 90vh;
+    height: fit-content;
+    background-image: url(image/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#first{
+    height: 9vw;
+    top: 9vh;
+}
+#second{
+    height: 5vw;
+    top: 20vh;
+    left: 14vw;
+}
+#third{
+    height:8vw;
+    top: 10vh;
+    left: 40vw;
+}
+#fourth{
+    position: fixed;
+    height: 16vw;
+    top: 10vh;
+    right: 0;
+}
+#fifth{
+    height: 15vw;
+    position: fixed;
+    bottom: 10vh;
+    right: 0;
+}
+#sixth{
+    height: 6vw;
+    position: fixed;
+    bottom: 10vh;
+    left: 0;
+}
+
+#seventh{
+    height: 23vw;
+    position: fixed;
+    top: 28vh;
+    left: 0;
+}
+
+#eighth{
+    height: 6vw;
+    position: fixed;
+    left: 45vw;
+    bottom: 10vh;
+}
+
+.navbar{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.logo{
+    display: flex;
+    color: aliceblue;
+}
+.logo p{
+    font-family: orbitron;
+    font-size: x-large;
+    font-weight: 800;
+}
+.logo img{
+    width: 20px;
+}
+.navbar ul{
+    list-style-type: none;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul a{
+    color: aliceblue;
+    font-size: 14px;
+    position: relative;
+    transition: 0.2s linear;
+}
+
+.navbar ul a:hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fb4b29;
+    transition: 0.2s linear;
+}
+
+.navbar ul a:hover::before,ul a:hover{
+   color: #fb4b29; 
+   width: 100%;
+}
+
+.nav_info{
+    color: white;
+    font-size: 0.8rem;
+}
+
+/*############################# header ###############*/
+
+.start_content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4% 15%;
+}
+.start_content h1{
+    font-family: orbitron;
+    font-weight: 700;
+    font-size: 70px;
+    align-content: center;
+    text-align: center;
+}
+
+.start_content p{
+    margin: 2rem;
+}
+
+.start_btn button{
+    background: #ed4827;
+    color: aliceblue;
+    width: auto;
+    padding: 0 15px;
+    height: 35px;
+    font-family: orbitron;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s linear;
+}
+
+.start_btn button:hover{
+    background: white;
+    color: #fb4b29;
+    border: 2px solid #fb4b29;
+}
+
+.hamburger-menu input[type="checkbox"]{
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+}
+.hamburger-menu input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+.menu{
+    display: none;
+    position: absolute;
+    top: 25px;
+    width: 80px;
+    background-color: rgba(244, 242, 238, 1);
+}
+.menu li{
+    list-style-type: none;
+    font-size: 12px;
+    padding: 4px;
+    border: 1px solid grey; 
+    border-bottom: 1px solid grey;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .menu{
+    display: block;
+}
+.hamburger-lines{
+    background: rgba(244, 242, 238, 1);
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.hamline{
+    background-color: black;
+     width: 100%; 
+     height: 4px; 
+    display: block;
+} 
+.toggle-btn{
+    z-index: 100;
+    cursor: pointer;
+}
+.toggle-btn img{
+    height: 20px;
+    display: none;
+}
+/*######################## responsive ##################*/
+
+@media(max-width:884px){
+    .start_content h1{
+        font-size: 50px;
+    }
+    .start_content p{
+        font-size: 0.7rem;
+    }
+    #first{
+        height: 14vw;
+    }
+    #second{
+        height: 10vw;
+    }
+    #third{
+        height: 13vw;
+    }
+    #fourth{
+        height: 21vw;
+    }
+    #fifth{
+        height: 20vw;
+    }
+    #sixth{
+        height: 11vw;
+    }
+    #seventh{
+        height: 28vw;
+    }
+    #eighth{
+        height: 11vw;
+    }
+}
+@media(max-width:955px){
+    .navbar ul{
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: black;
+        z-index: 100;
+        padding: 80px 0 25px 0;
+        border: 2px solid white;
+    }
+    .logo{
+        z-index: 1000;
+    }
+    .navbar ul li{
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+    .navbar ul.active{
+        display: block;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    .toggle-btn img{
+        display: block;
+    }
+}
+@media(min-width:955px){
+    .hamburger-menu{
+        display: none;
+    }
+}
+@media(max-width:545px){
+    .start_content h1{
+        font-size: 40px;
+    }
+    .start_content p{
+        font-size: 0.5rem;
+    }
+    .start_content button{
+        font-size: 0.5rem;
+    }
+    #first{
+        height: 15vh;
+    }
+    #second{
+        height: 8vh;
+    }
+    #third{
+        height: 13vh;
+    }
+    #fourth{
+        height: 23vh;
+        top: 30vh;
+    }
+    #fifth{
+        height: 20vh;
+    }
+    #sixth{
+        height: 17vh;
+    }
+    #seventh{
+        height: 30vh;
+    }
+    #eighth{
+        height: 11vh;
+    }
+}
+@media(max-width:435px){
+    .navbar{
+        padding: 20px 0;
+    }
+    .logo p{
+        font-size: larger;
+    }
+    .logo img{
+        width: 15px;
+    }
+    .nav_info{
+        font-size: 7px;
+    }
+}
+@media(max-width:373px){
+    .back_img img{
+        position: relative;
+    }
+    #fifth{
+        top: 70vh;
+    }
+    #sixth{
+        top: 73.1vh;
+    }
+    #eighth{
+        top: 81.1vh;
+        left: 35vw;
+        height: 9vh;
+    }
+    #fourth{
+        height: 28vh;
+    }
+    .start_content h1{
+        font-size: 30px;
+    }
+    .start_content p{
+        font-size: 0.5rem;
+    }
+}
+/*######################## sun #######################*/
+.second_sec{
+    background-image: url(image/background\ 2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.second_sec img{
+    width: 100vw;
+}
+
+
