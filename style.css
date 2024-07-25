@@ -11,7 +11,7 @@ body{
     width: 100%;
     height: 100%;
     margin: 0;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 a{
@@ -384,6 +384,97 @@ button{
 }
 .second_sec img{
     width: 100vw;
+}
+.topic{
+    font-family: orbitron;
+    font-weight: 600;
+    font-size: 60px;
+    color: aliceblue;
+    z-index: 100;
+}
+.exp{
+    font-size: 20px;
+    color: aliceblue;
+    z-index: 100;
+}
+.num{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    padding: 10px;
+}
+.num h1{
+    font-family: orbitron;
+    font-size: 10px;
+}
+.num p{
+    font-family: orbitron;
+    font-weight: 400;
+    font-size: 20px;
+}
+.box img{
+    height: 30px;
+    width: 30px;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(#430E49,#370D44,#170B36,#100A33);
+    border: 2px solid white;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    /*display: inline-block*/
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text1{
+    margin: 0px 20px;
+    padding-bottom: 20px;
+    width: 60vw;
+}
+/*################# responsive #################*/
+
+@media(max-width:800px){
+    .text{
+        width: 90vw;
+    }
+}
+@media(max-width:650px){
+    .topic{
+        font-size: 40px;
+    }
+    .exp{
+        font-size: 12px;
+    }
+}
+@media(max-width:450px){
+    .box img{
+        height: 20px;
+        width: 20px;
+    }
+    .num h1{
+        font-size: 8px;
+    }
+    .num p{
+        font-size: 12px;
+    }
+}
+@media(max-width:280px){
+    .topic{
+        font-size: 30px;
+    }
+    .exp{
+        font-size: 8px;
+    }
+    .box{
+        padding: 5px;
+    }
 }
 
 
