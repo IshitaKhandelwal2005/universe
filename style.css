@@ -6,12 +6,14 @@
     box-sizing: border-box;
     position: relative;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 a{
@@ -438,19 +440,254 @@ button{
     padding-bottom: 20px;
     width: 60vw;
 }
-/*################# responsive #################*/
+.third_sec{
+    background: url(image/background3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.third_sec img{
+    min-height: fit-content;
+    height: 100%;
+    align-self: center;
+}
+.text2,.text3,.text4 .partition{
+    width: 50vw;
+    margin: 10px;
+    align-self: center;
+}
+.fourth_sec{
+    background: url(image/background4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+.fourth_sec .ven{
+    width: 50%;
+    align-self: last baseline;
+}
+.text3{
+    margin: 20px;
+}
 
+/*#############################fifth secotion ########################*/
+.fifth_sec{
+    background: url(image/background5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.extra_info h2{
+    color: white;
+    font-family: orbitron;
+    font-weight: 600;
+    font-size: 40px;
+}
+.text4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.text4 .box{
+    height: fit-content;
+}
+.ear{
+    width: 100%;
+}
+.extra_info{
+    max-width: 60vw;
+    width: fit-content;
+    text-align: right;
+    padding: 15px;
+}
+.text4 .partition{
+    max-width: 60vw;
+    width: fit-content;
+}
+.moon_sec img{
+    width: 20%;
+}
+.moon_sec{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*####################sixth section########################*/
+.sixth_sec{
+    background: url(image/Mars_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text5{
+    max-width: 60vw;
+    width: fit-content;
+}
+.mars{
+    max-width: 60vw;
+}
+.mars_moon_sec img{
+    max-width: 30%;
+}
+.mars_moon_sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: fit-content;
+    margin-left: 10%;
+}
+.text5 .partition{
+    padding: 3%;
+}
+
+/*###################seventh section ####################*/
+.seventh_sec{
+    background: url(image/Jupiter_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+.jup,.sat{
+    max-width: 50vw;
+}
+.text6,.text7{
+    max-width: 50vw;
+    padding: 3%;
+}
+.text6 .info,.text7 .info{
+    flex-direction: column;
+}
+
+/*#########################eighth section######################*/
+.eighth_sec{
+    background: url(image/Saturn_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+/*#####################ninth section ###############*/
+.ninth_sec{
+    background: url(image/Uranusback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text8{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ura,.nep{
+    width: 100%;
+}
+.text8 .partition{
+    max-width: 40%;
+}
+.text8 .info{
+    height: fit-content;
+}
+/*####################tenth section#################*/
+.tenth_sec{
+    background: url(image/Neptuneback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text9{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%; 
+    margin: 0 auto;
+}
+.text9 .partition{
+    text-align: center;
+}
+/*################# responsive #################*/
+@media(max-width:1050px){
+    .topic{
+        font-size: 45px;
+    }
+    .exp{
+        font-size: 14px;
+    }
+    .third_sec .merc{
+        width: 40%;
+    }
+    .mars_moon_sec{
+        max-width: 35vw;
+        margin-left:35%;
+    }
+}
+@media(min-width:880.5px){
+    .sixth_sec .info{
+        max-width: fit-content;
+        flex-direction: column;
+        position: absolute;
+        right: 5%;
+        top: 4%;
+    }
+}
+@media(max-width:880px){
+    .text5{
+        max-width: 80vw;
+    }
+    .mars_moon_sec{
+        max-width: 50vw;
+        margin-left: 45%;
+        align-items: start;
+    }
+}
 @media(max-width:800px){
     .text{
         width: 90vw;
     }
+    .third_sec .merc{
+        width: 35%;
+    }
+    .text2{
+        width: 50vw;
+    }
+    .text4{
+        padding: 0px;
+        padding-top: 10px;
+    }
+    .text4 .partition{
+        margin: 0px;
+        margin-left: 5px;
+    }
+    .text8{
+        justify-content: flex-start;
+    }
+    .text8 .partition{
+        max-width: 80%;
+    }
 }
+
 @media(max-width:650px){
     .topic{
         font-size: 40px;
     }
     .exp{
         font-size: 12px;
+    }
+}
+@media(max-width:520px){
+    .moon_sec img{
+        max-height: 10%;
+        height: 120px;
+        align-self: last baseline;
     }
 }
 @media(max-width:450px){
@@ -464,6 +701,38 @@ button{
     .num p{
         font-size: 12px;
     }
+    .jup,.sat{
+        max-height: 40vh;
+    }
+    .text7 .topic{
+        font-size: 33px;
+    }
+    .text7 .exp{
+        font-size: 10px;
+    }
+}
+@media(max-width:350px){
+    .mars_moon_sec{
+        align-items: center;
+    }
+    .mars_moon_sec img{
+        justify-self: last baseline;
+    }
+    .extra_info h2{
+        font-size: 30px;
+    }
+    .extra_info p{
+        font-size: 7px;
+    }
+    .sat{
+        max-width: 40vw;
+    }
+    .text7{
+        max-width: 60vw;
+    }
+    .text8 .partition{
+        max-width: 100%;
+    }
 }
 @media(max-width:280px){
     .topic{
@@ -474,6 +743,23 @@ button{
     }
     .box{
         padding: 5px;
+    }
+    .jup,.sat{
+        max-height: 35vh;
+    }
+    .text7 .topic{
+        font-size: 27px;
+    }
+    .text7 .exp{
+        font-size: 8px;
+    }
+}
+@media(max-width:240px){
+    .mars_moon_sec{
+        margin-left: 30%;
+    }
+    .jup,.sat{
+        max-height: 30vh;
     }
 }
 
