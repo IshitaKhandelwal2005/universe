@@ -28,62 +28,37 @@ button{
 
 
 /*############# navbar ###############################################*/
-.back_img{
-    position: absolute;
-    width: 100%;
-    min-height: 90vh;
-    height: fit-content;
-    background-image: url(image/Hero.jpg);
+.main_container{
+    background: url(image/5.png),url(image/6.png),url(image/8.png),url(image/Hero.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-size: 16vw,8vw,10vw,cover;
+    background-position: bottom right,bottom left,bottom center,center;
 }
 
 #first{
-    height: 9vw;
-    top: 9vh;
+    height: 8vw;
+    top: -5vh;
 }
 #second{
     height: 5vw;
-    top: 20vh;
+    top: 11vh;
     left: 14vw;
 }
 #third{
-    height:8vw;
-    top: 10vh;
+    height:10vw;
     left: 40vw;
 }
 #fourth{
-    position: fixed;
-    height: 16vw;
-    top: 10vh;
+    position: absolute;
+    height: 17vw;
     right: 0;
-}
-#fifth{
-    height: 15vw;
-    position: fixed;
-    bottom: 10vh;
-    right: 0;
-}
-#sixth{
-    height: 6vw;
-    position: fixed;
-    bottom: 10vh;
-    left: 0;
 }
 
 #seventh{
-    height: 23vw;
-    position: fixed;
-    top: 28vh;
+    height: 22vw;
+    position: absolute;
+    top: 24vh;
     left: 0;
-}
-
-#eighth{
-    height: 6vw;
-    position: fixed;
-    left: 45vw;
-    bottom: 10vh;
 }
 
 .navbar{
@@ -151,7 +126,8 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4% 15%;
+    padding: 0% 15%;
+    padding-bottom: 5%;
 }
 .start_content h1{
     font-family: orbitron;
@@ -235,8 +211,23 @@ button{
     height: 20px;
     display: none;
 }
-/*######################## responsive ##################*/
 
+/*######################## responsive ##################*/
+@media(max-width:1263px){
+    #first{
+        top: 0;
+    }
+    #seventh{
+        top: 30vh;
+        height: 28vw;
+    }
+}
+@media(max-width:945px){
+    .main_container{
+        background-size: 20vw,12vw,14vw,cover;
+        
+    }
+}
 @media(max-width:884px){
     .start_content h1{
         font-size: 50px;
@@ -256,17 +247,11 @@ button{
     #fourth{
         height: 21vw;
     }
-    #fifth{
-        height: 20vw;
-    }
-    #sixth{
-        height: 11vw;
-    }
+}
+@media(max-width:635px){
     #seventh{
-        height: 28vw;
-    }
-    #eighth{
-        height: 11vw;
+        top: 35vh;
+        height: 33vw;
     }
 }
 @media(max-width:955px){
@@ -326,17 +311,8 @@ button{
         height: 23vh;
         top: 30vh;
     }
-    #fifth{
-        height: 20vh;
-    }
-    #sixth{
-        height: 17vh;
-    }
     #seventh{
         height: 30vh;
-    }
-    #eighth{
-        height: 11vh;
     }
 }
 @media(max-width:435px){
@@ -352,24 +328,27 @@ button{
     .nav_info{
         font-size: 7px;
     }
+    .main_container{
+        background-size: 25vw,17vw,19vw,cover;
+    }
+    #first{
+        height: 19vw;
+    }
+    #second{
+        height: 8vw;
+    }
+    #third{
+        height: 18vw;
+        left: 30vw;
+    }
+    #fourth{
+        height: 35vw;
+        top: 25vh;
+    }
 }
 @media(max-width:373px){
     .back_img img{
         position: relative;
-    }
-    #fifth{
-        top: 70vh;
-    }
-    #sixth{
-        top: 73.1vh;
-    }
-    #eighth{
-        top: 81.1vh;
-        left: 35vw;
-        height: 9vh;
-    }
-    #fourth{
-        height: 28vh;
     }
     .start_content h1{
         font-size: 30px;
@@ -613,6 +592,78 @@ button{
 }
 .text9 .partition{
     text-align: center;
+}
+
+/*################footer####################*/
+.form {
+    display:flex;
+    flex-direction:row;
+    padding:1px;
+    padding-right: 5px;
+    margin: 2% auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: white;
+  }
+  
+.form input {
+    flex-grow:2;
+    border:none;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+ .form input:focus {
+    outline: none;
+  }
+  
+.form button {
+    border:1px solid blue;
+    background:blue;
+    color:white;
+    border-radius: 20px;
+    margin: 1%;
+}
+.footer{
+    height: 50vh;
+    background:url(image/lastimage.png),url(image/Footer.png);
+    background-position: left top,center;
+    background-repeat: no-repeat;
+    background-size:100vw,cover;
+    padding-top: 10vh;
+}
+.footer_content{
+    text-align: center;
+    border: 2px solid rgb(134,96,166);
+    background-color: #1a1a1a;
+    margin: auto;
+    max-width: 70vw;
+    border-radius: 15px;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+.footer_content h2{
+    font-family: orbitron;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.footer_content p{
+    font-size: small;
+}
+.form input{
+    margin-left: 5px;
+}
+.form button{
+    padding: 10px;
+    background-color: #ff0080;
+    background: linear-gradient(315deg, #CD1013 1.19%, #FF0004 1.5%, #2500FF 94.46%);
+}
+.form button:hover{
+    cursor: pointer;
 }
 /*################# responsive #################*/
 @media(max-width:1050px){
