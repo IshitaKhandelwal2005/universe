@@ -8,16 +8,6 @@
     <title>Universe</title>
 </head>
 <body>
-    <div class="back_img">
-        <img src="image/1.png" alt="background" id="first"> 
-        <img src="image/2.png" alt="background" id="second"> 
-        <img src="image/3.png" alt="background" id="third"> 
-        <img src="image/4.png" alt="background" id="fourth"> 
-        <img src="image/5.png" alt="background" id="fifth"> 
-        <img src="image/6.png" alt="background" id="sixth"> 
-        <img src="image/7.png" alt="background" id="seventh"> 
-        <img src="image/8.png" alt="background" id="eighth"> 
-    </div>
     <div class="main_container">
         <div class="navbar">
              <div class="logo">
@@ -41,6 +31,11 @@
                 <img src="image/ham2.jpg" alt="button">
              </button>
         </div>
+        <img src="image/1.png" alt="background" id="first"> 
+        <img src="image/2.png" alt="background" id="second"> 
+        <img src="image/3.png" alt="background" id="third"> 
+        <img src="image/4.png" alt="background" id="fourth"> 
+        <img src="image/7.png" alt="background" id="seventh"> 
         <div class="start_content">
             <h1 class="animation1">Let's Get To Know Our Solar System Galaxy</h1>
             <p>Embark on a cosmic journey across the ethereal expanse of the solar system Galaxy and follow the orchestration of the cosmos and the planets weaving stories of their timeless existence.
@@ -82,7 +77,9 @@
         </div>
      </div>
      <div class="third_sec">
-        <img src="image/mercury.png" alt="mercury" class="merc">
+        <div class="zoom">
+            <img src="image/mercury.png" alt="mercury" class="merc">
+        </div>
         <div class="text2 text">
             <h1 class="topic">1.Mercury</h1>
             <p class="exp">Mercury is the closest planet to the Sun and is known for its extreme temperatures and barren, rocky surface. It is one of the four terrestrial planets in our solar system, characterized by their solid, rocky composition.</p>
@@ -294,6 +291,16 @@
         </div>
         <img src="image/neptune.png" alt="neptune" class="nep">
      </div>
+     <div class="footer">
+        <div class="footer_content">
+            <h2>Join The Education Community</h2>
+            <p>Join the Education Community today and be part of a movement that's transforming minds and shaping tomorrows.</p>
+            <div class="form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+     </div>
      <script>
         ScrollReveal({
             reset: true,
@@ -302,9 +309,11 @@
             delay: 400
         });
 
-        ScrollReveal().reveal('.text .topic' ,{ delay: 300, origin: 'top' });
-        ScrollReveal().reveal('.second_sec .animation2,.text2 .exp, .text2 .box', { delay: 400, origin: 'right' });
-        ScrollReveal().reveal('.text1 .exp,.text1 .box,.third_sec .merc', { delay: 400, origin: 'left' });
+        ScrollReveal().reveal('.text .topic,.text4' ,{ delay: 300, origin: 'top' });
+        ScrollReveal().reveal('.second_sec .animation2,.text2 .exp, .text2 .box,.ven,.mars_moon_sec .extra_info,.jup,.text7,.text8 .info,.text9', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('.text1 .exp,.text1 .box,.third_sec .merc,.text3,.moon_sec .extra_info,.text5 .partition .exp,.sixth_sec .info,.text6,.sat,.text8 .partition,.nep', { delay: 300, origin: 'left' });
+        ScrollReveal().reveal('.ear,.mars,.ura' ,{ delay: 300, origin: 'bottom' });
+        ScrollReveal().reveal('.moon_sec img,.mars_moon_sec img' ,{ delay: 600, origin: 'bottom' });
      </script>
 </body>
 </html>
